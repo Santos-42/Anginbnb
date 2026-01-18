@@ -1,0 +1,390 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; 
+    color: #333333;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    border-bottom: 3px solid whitesmoke;
+    margin-bottom: 10px;
+}
+
+#logocompany{
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(209, 40, 167);
+}
+
+.menu-page {
+    display: flex;
+    gap: 30px; 
+    color: black;
+}
+
+.welcome-msg {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* main */
+main{
+    flex-grow: 1;
+    padding: 40px 0px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+}
+
+main p {
+    font-size: 20px;
+    color: #414141;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#classinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    font-size: 16px; 
+    color: #333;
+    padding: 0; 
+}
+
+#pageshow {
+    text-align: right;
+    font-weight: 400; 
+}
+
+.Juduluser{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#Search { 
+    font-weight: 700;
+    font-size: 25px; 
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#totaluser{
+    font-size: 18px;
+}
+
+#searchbar {
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+#inputclass {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+#search-btn {
+    padding: 10px 25px;
+    background-color: rgb(208, 22, 140); 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+.user-header{
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1.5fr 1.5fr; 
+    align-items: center;
+    column-gap: 20px; 
+    padding: 15px 20px; 
+}
+
+
+.grid-user {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    overflow: hidden; 
+}
+
+
+.user-header, .usergrid {
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr 1.5fr 1.5fr; 
+    align-items: center;
+    column-gap: 20px; 
+    padding: 0 20px; 
+}
+
+
+.user-header {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    padding: 15px 25px;
+}
+
+.isi-header {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    gap: 20px   ;
+}
+
+#roleheader{
+    margin-left: 100px;
+}
+
+#action{
+    margin-left: 90px;
+}
+
+.role{
+    margin-left: 90px;
+}
+
+
+.usergrid {
+    border-bottom: 1px solid #1b1717;
+    row-gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.usergrid:last-child {
+    border-bottom: none;
+}
+
+#tulisanadmin{
+    color: red;
+}
+
+.datauser {
+    display: contents;
+}
+
+
+.UserID {
+    font-weight: 600;
+    color: rgb(216, 40, 122);
+    text-align: center; 
+}
+
+
+.userdetails {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.userdetails p {
+    margin: 0;
+    text-align: left;
+}
+.userdetails p:first-child { 
+    font-weight: 600;
+    color: #333;
+}
+.userdetails p:last-child { 
+    font-size: 14px;
+    color: #999;
+}
+
+
+
+.role {
+    font-weight: 600;
+    color: #333;
+    text-align: left; 
+}
+.usergrid:nth-child(4n) .role { 
+    color: #387b92; 
+}
+.usergrid:nth-child(5n) .role { 
+    color: rgb(216, 40, 122);
+}
+
+
+
+.actionbutton {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end; 
+    align-items: center;
+    min-height: 25px;
+    margin-right: 20px;
+}
+
+.actionbutton button {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 50px; 
+    text-align: center;
+    
+}
+
+.actionbutton .edit {
+    background-color: #ffcccc; 
+    color: rgb(201, 45, 117);
+}
+
+.actionbutton #editadmin {
+    background-color: #ffcccc; 
+    color: rgb(201, 45, 117);
+}
+
+.actionbutton .Delete {
+    background-color: #da3c39; 
+    color: white;
+}
+
+.actionbutton #editadmin,#admin-label{
+    margin-right: 13px;
+}
+
+.admin-label {
+    font-size: 13px;
+    color: #777;
+    gap: 20px;
+}
+
+.pagination{
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0px 30px;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+
+.page-active{
+    background-color: rgb(192, 114, 182);
+    width: 35px;
+    border-radius: 10px; 
+    height: 40px;
+    padding-top: 10px;
+}
+
+.next-page{
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 10px;
+    width: 35px;
+    padding-top: 10px;
+}
+
+
+/* footer */
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: white;
+    border-top: 3px solid whitesmoke;
+}
+
+.footerisi{
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    min-width: 150px;
+    flex: 1;
+}
+
+.footerisi div{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    margin-top: 10px;
+}
+
+
+#desc{
+    font-weight: normal;
+    line-height: 15px;
+    margin-top: 12px;
+    padding-right: 20px;
+}
+
+
+
+/* COPYRIGHJT */
+
+
+
+#copyright{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 80px;
+    background-color: white;
+    border: 1px solid rgb(204, 201, 201);
+    font-size: 15px;
+    color: black;
+}
+
+.copyrightisi:first-child{
+    margin-right: auto;
+}

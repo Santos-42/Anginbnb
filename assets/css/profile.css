@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    color: #333333;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: white;
+    border: 1px solid white;
+    height: 40px;
+    border-bottom: 3px solid whitesmoke;
+    margin-bottom: 10px;
+}
+
+#logocompany{
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(209, 40, 167);
+}
+
+.menu-page {
+    display: flex;
+    gap: 30px; 
+    color: black;
+}
+
+.welcome-msg {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+
+/* main */
+main{
+    flex-grow: 1;
+    padding: 40px 0px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+}
+
+main p {
+    font-size: 20px;
+    color: #414141;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+
+.FormBox {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #f7f5f5;
+}
+
+.FormBox h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000; 
+    text-align: left;
+}
+
+.dangerbox{
+    background-color: rgb(242, 190, 187);
+    border-radius: 10px;
+    width: 94%;
+    margin-left: 30px;
+
+}
+.dangerbox h2{
+    text-align: left;
+    margin-left: 22px;
+    color: red;
+    margin-bottom: 10px;
+    
+}
+
+.dangerTitle {
+    color: red;
+    border-bottom: none; 
+    margin-bottom: 0;
+}
+
+.danger-isi{
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.danger-isi p2{
+    color: red;
+    margin-bottom: 25px;
+}
+
+#delete-btn{
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #cc3737; /* Merah Solid */
+    color: white;
+    width: 25%;
+}
+
+.form-isi {
+    margin-bottom: 20px;
+}
+
+
+.form-isi label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.form-isi input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0d6d6;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.save-btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(212, 62, 46); 
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+/* footer */
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    background-color: white;
+    border-top: 3px solid whitesmoke;
+}
+
+.footerisi{
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    min-width: 150px;
+    flex: 1;
+}
+
+.footerisi div{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    margin-top: 10px;
+}
+
+
+#desc{
+    font-weight: normal;
+    line-height: 15px;
+    margin-top: 12px;
+    padding-right: 20px;
+}
+
+
+
+/* COPYRIGHJT */
+
+
+
+#copyright{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 80px;
+    background-color: white;
+    border: 1px solid rgb(204, 201, 201);
+    font-size: 15px;
+    color: black;
+}
+
+.copyrightisi:first-child{
+    margin-right: auto;
+}

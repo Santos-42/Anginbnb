@@ -1,0 +1,164 @@
+/* main */
+
+#Detailproperty{
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    flex-grow: 1;
+}
+
+#Detailproperty h1{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    
+    
+}
+
+
+.content-wrap{
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+}
+
+.column-left {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+#Detailtempat,#aboutplace{
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid black;
+    margin-bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+
+
+.detailtempat{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.detailtempat:last-child{
+    border-bottom: none;
+}
+
+#aboutplace{
+    width: 100%;
+}
+
+.detailtempat p, .detailtempat div {
+    margin: 0;
+    font-size: 25px;
+}
+
+#aboutplace h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    width: 100%;
+}
+
+#aboutplace p{
+    font-size: 20px;
+}
+
+#Reserve-box{
+    width: 30%;
+    padding: 25px;
+    border-radius: 15px;
+    height: fit-content;
+    margin-top: 0px;
+    border: 1px solid grey;
+}
+
+#Reserve-box h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+}
+
+#pricedisplay{
+    display:flex;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#pricedisplay h3{
+    font-size:45px;
+    color: #0f0e0e;
+}
+#pricedisplay p{
+    font-size: 40px;
+    color: #a5a5a5;
+}
+
+
+.datainputbox{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 23px;
+}
+
+.data-input-form {
+    flex-grow: 1;
+}
+
+.data-input-form label,
+.payment-method label {
+    display: block;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 7px;
+    color: black;
+}
+
+.data-input-form input,
+.payment-method select{
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid rgb(185, 182, 182);
+    border-radius: 10px;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.payment-method{
+    margin-bottom: 30px;
+    
+}
+
+.payment-method option{
+    background-color: #f1eff1;
+}
+
+
+#reserve-btn{
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: rgb(216, 40, 122)   ;
+    border-radius: 10px;
+    font-size: large;
+    color: white;
+    border: 1px solid rgb(233, 90, 168);
+}
+
