@@ -1,7 +1,13 @@
 <?php
 $ca_path = __DIR__ . '/ca.pem';
+
 if (!file_exists($ca_path)) {
-    die("KEGAGALAN KEAMANAN: Sertifikat SSL (ca.pem) tidak ditemukan di server.");
+    $cert_content = getenv('DB_SSL_CERT');
+    if ($cert_content) {
+        file_put_contents($ca_path, str_replace('\n', "\n", $cert_content));
+    } else {
+        die("KEGAGALAN INFRASTRUKTUR: Sertifikat SSL tidak ditemukan di lokal dan ENV gagal dimuat.");
+    }
 }
 
 $kredensial_path = __DIR__ . '/kredensial.php';
@@ -21,9 +27,10 @@ if (file_exists($kredensial_path)) {
 }
 
 $connect = mysqli_init();
+
 mysqli_ssl_set($connect, NULL, NULL, $ca_path, NULL, NULL); 
 
 if (!mysqli_real_connect($connect, $host, $user, $pass, $db, $port)) {
-    die("KEGAGALAN INFRASTRUKTUR KONEKSI: " . mysqli_connect_error());
+    die("KEGAGALAN KONEKSI: " . mysqli_connect_error());
 }
 ?>
