@@ -92,7 +92,7 @@ include '../components/navbar.php';
                             <button id="editadmin" disabled style="opacity:0.5;">Edit</button>
                             <span id="admin-label">(You)</span>
                         <?php else: ?>
-                            <a href="admin/edit-user.php?id=<?php echo $row['UserID']; ?>">
+                            <a href="edit-user.php?id=<?php echo $row['UserID']; ?>">
                                 <button class="edit" type="button">Edit</button>
                             </a>
                             
@@ -109,7 +109,7 @@ include '../components/navbar.php';
 
         <div class="pagination">
             <?php for($i = 1; $i <= $total_pages; $i++): ?>
-                <a href="admin/manage-users.php?page=<?php echo $i; ?>&search=<?php echo $search; ?>" 
+                <a href="manage-users.php?page=<?php echo $i; ?>&search=<?php echo $search; ?>" 
                    class="<?php echo ($i == $page) ? 'page-active' : 'next-page'; ?>">
                    <?php echo $i; ?>
                 </a>

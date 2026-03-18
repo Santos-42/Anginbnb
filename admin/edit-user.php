@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'Admin') {
 }
 
 if (!isset($_GET['id'])) {
-    header("Location: admin/manage-users.php");
+    header("Location: manage-users.php");
     exit();
 }
 
@@ -69,7 +69,7 @@ include '../components/navbar.php';
                 <button type="submit" name="update_role" id="update-btn">Update Role</button>
             </form>
         </div>
-        <a href="admin/manage-users.php" style="text-decoration:none;">
+        <a href="manage-users.php" style="text-decoration:none;">
                     <button type="button" id="back-btn">Back to Users</button>
         </a>
     </div>

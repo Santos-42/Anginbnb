@@ -109,7 +109,7 @@ include '../components/navbar.php';
                     </div>
 
                     <div class="button" style="margin-top: 30px; display: flex; gap: 15px;">
-                        <a href="admin/manage-properties.php" style="text-decoration: none; width: 100%;">
+                        <a href="manage-properties.php" style="text-decoration: none; width: 100%;">
                             <button type="button" class="update-button" style="width: 100%;">Back to List</button>
                         </a>
                         <button type="submit" class="update-button" style="width: 100%;">Update Property</button>
