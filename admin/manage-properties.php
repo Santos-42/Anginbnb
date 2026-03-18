@@ -177,7 +177,7 @@ include '../components/navbar.php';
 
             <div class="pagination">
                 <?php for($i = 1; $i <= $total_pages; $i++): ?>
-                    <a href="admin/manage-properties.php?page=<?php echo $i; ?>&search=<?php echo $search; ?>" 
+                    <a href="manage-properties.php?page=<?php echo $i; ?>&search=<?php echo $search; ?>" 
                        class="<?php echo ($i == $page) ? 'page-active' : 'next-page'; ?>">
                        <?php echo $i; ?>
                     </a>
