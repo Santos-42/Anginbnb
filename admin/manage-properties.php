@@ -65,7 +65,8 @@ $result = mysqli_query($connect, $query);
 $cat_result = mysqli_query($connect, "SELECT * FROM MsCategory");
 
 
-$page_css = 'assets/css/manageproperti.css';
+$base_path = '../';
+$page_css = $base_path . 'assets/css/manageproperti.css';
 include '../components/header.php';
 include '../components/navbar.php';
 ?>

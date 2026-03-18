@@ -34,7 +34,8 @@ if (!$data) {
     exit();
 }
 
-$page_css = 'assets/css/edituser.css';
+$base_path = '../';
+$page_css = $base_path . 'assets/css/edituser.css';
 include '../components/header.php';
 include '../components/navbar.php';
 ?>

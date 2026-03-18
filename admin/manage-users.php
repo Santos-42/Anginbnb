@@ -37,8 +37,9 @@ $total_pages = ceil($total_users / $limit);
 $query = "SELECT * FROM MsUser $where LIMIT $start, $limit";
 $result = mysqli_query($connect, $query);
 
-// Tampilan
-$page_css = 'assets/css/manageuser.css';
+
+$base_path = '../';
+$page_css = $base_path . 'assets/css/manageuser.css';
 include '../components/header.php';
 include '../components/navbar.php';
 ?>

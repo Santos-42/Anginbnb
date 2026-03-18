@@ -29,7 +29,8 @@ $query = "SELECT * FROM MsCategory";
 $result = mysqli_query($connect, $query);
 $total_cats = mysqli_num_rows($result);
 
-$page_css = 'assets/css/managecategories.css';
+$base_path = '../';
+$page_css = $base_path . 'assets/css/managecategories.css';
 include '../components/header.php';
 include '../components/navbar.php';
 ?>

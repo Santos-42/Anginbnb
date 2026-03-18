@@ -30,7 +30,8 @@ $result = mysqli_query($connect, $query);
 $total_types = mysqli_num_rows($result);
 
 
-$page_css = 'assets/css/payment.css';
+$base_path = '../';
+$page_css = $base_path . 'assets/css/payment.css';
 include '../components/header.php';
 include '../components/navbar.php';
 ?>
