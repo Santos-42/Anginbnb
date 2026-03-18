@@ -158,7 +158,7 @@ include '../components/navbar.php';
                             <div class="isi-data-property"><?php echo $row['PropertyRating']; ?></div>
                             <div class="isi-data-property"><?php echo $row['CategoryName']; ?></div>
                             <div class="action-buttons">
-                                <a href="admin/edit-property.php?id=<?php echo $row['PropertyID']; ?>">
+                                <a href="edit-property.php?id=<?php echo $row['PropertyID']; ?>">
                                     <button class="Edit" type="button">Edit</button>
                                 </a>
                                 
