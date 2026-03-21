@@ -26,11 +26,32 @@ if (file_exists($kredensial_path)) {
     $pass = getenv('DB_PASS');
 }
 
+// SOLUSI 3: Persistent Connection
+// Menambahkan 'p:' agar PHP menggunakan kembali koneksi yang sama, memangkas overhead SSL
+$persistent_host = (strpos($host, 'p:') === 0) ? $host : 'p:' . $host;
+
 $connect = mysqli_init();
+mysqli_ssl_set($connect, NULL, NULL, $ca_path, NULL, NULL);
 
-mysqli_ssl_set($connect, NULL, NULL, $ca_path, NULL, NULL); 
+// SOLUSI 2: Retry Logic untuk mengatasi Cold Start Aiven
+$max_retries = 3;
+$retry_count = 0;
+$connected = false;
 
-if (!mysqli_real_connect($connect, $host, $user, $pass, $db, $port)) {
-    die("KEGAGALAN KONEKSI: " . mysqli_connect_error());
+while ($retry_count < $max_retries && !$connected) {
+    // Kita suppress warning PHP dengan '@' agar user tidak melihat error saat retry
+    if (@mysqli_real_connect($connect, $persistent_host, $user, $pass, $db, $port)) {
+        $connected = true;
+    } else {
+        $retry_count++;
+        if ($retry_count < $max_retries) {
+            // Beri waktu 2 detik bagi database server untuk bangun dari tidur sebelum mencoba lagi
+            sleep(2);
+        }
+    }
+}
+
+if (!$connected) {
+    die("KEGAGALAN KONEKSI FATAL SETELAH {$max_retries} PERCOBAAN: " . mysqli_connect_error());
 }
 ?>
